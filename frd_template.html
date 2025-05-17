@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functional Requirement Document</title>
+    <style>
+        .page {
+            padding: 10mm;
+            font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page:not(:first-child) {
+            page-break-before: always;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 6mm;
+        }
+
+        .header-container.center {
+            justify-content: center;
+        }
+
+        .header-container.left {
+            justify-content: flex-start;
+        }
+
+        .logo {
+            height: 90px;
+            margin-right: 20px;
+        }
+
+        .logo.small {
+            height: 50px;
+            margin-right: 15px;
+        }
+
+        .header-title {
+            font-size: 34px;
+            font-weight: 700;
+            color: #1a3c5e;
+            margin: 0;
+        }
+
+        .header-title.small {
+            font-size: 28px;
+            color: #2D3748;
+        }
+
+        .header-subtitle {
+            font-size: 24px;
+            font-weight: 400;
+            color: #4A4A4A;
+            margin-top: 5px;
+        }
+
+        .header-subtitle.small {
+            font-size: 18px;
+            color: #718096;
+        }
+
+        .hero-image {
+            text-align: center;
+            margin: 6mm 0;
+        }
+
+        .hero-image img {
+            max-width: 75%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-box {
+            margin: 4mm auto;
+            max-width: 85%;
+            padding: 12px 20px;
+            border-radius: 10px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .section-box h3 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a3c5e;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .section-box p {
+            font-size: 17px;
+            color: #333;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0 10px;
+        }
+
+        .main-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .content-section {
+            border-radius: 8px;
+            padding: 10px 14px;
+            margin-bottom: 6mm;
+            break-inside: avoid;
+            background-color: transparent;
+        }
+
+        .content-section h3 {
+            font-size: 22px;
+            font-weight: 700;
+            color: #1a3c5e;
+            margin-bottom: 6px;
+            line-height: 1.3;
+        }
+
+        .content-section p,
+        .content-section ul {
+            font-size: 19px;
+            font-weight: 400;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .content-section ul {
+            padding-left: 18px;
+            text-align: left;
+            margin-top: 4px;
+        }
+
+        .content-section ul li {
+            margin-bottom: 5px;
+        }
+
+        .content-section ul li.last {
+            margin-bottom: 0;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 16px;
+            color: #4A4A4A;
+            margin-top: 10mm;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div style="display: flex; align-items: center; justify-content: flex-start; margin-bottom: 6mm;">
+            <div>
+                <img src="http://localhost:8018/client_requirement_collection/static/img/cybrosys_logo.jpeg"
+                     alt="Cybrosys Logo"
+                     style="height: 50px; margin-right: 15px;"/>
+            </div>
+            <div>
+                <h2 style="font-size: 28px; font-weight: 700; color: #2D3748; margin: 0;">Cybrosys Technologies</h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 1 -->
+    <div class="page">
+        <div class="header-container center">
+            <img src="http://localhost:8018/client_requirement_collection/static/img/cybrosys_logo.jpeg"
+                 class="logo" alt="Cybrosys Logo"/>
+            <div>
+                <h1 class="header-title">Cybrosys Technologies</h1>
+                <h2 class="header-subtitle">Functional Requirement Document (FRD)</h2>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="http://localhost:8018/client_requirement_collection/static/img/office.jpg"
+                 alt="Office Image"/>
+        </div>
+        <div class="section-box">
+            <h3>Prepared for</h3>
+            <p>
+                <strong>Client Company Name</strong>
+                <br/>
+                This Functional Requirement Document (FRD) defines the business requirements, objectives, and
+                deliverables for the proposed solution. Crafted by <strong>Cybrosys Technologies
+            </strong> for <strong>Client Company Name</strong>, it establishes a clear scope, aligns
+                expectations, and serves as the foundation for a successful partnership.
+            </p>
+        </div>
+        <div class="section-box">
+            <h3>Project Overview acessibilidade</h3>
+            <p>
+                This project aims to deliver a tailored solution that addresses the unique challenges faced
+                by <strong>Client Company Name</strong>. By leveraging cutting-edge technology and industry best
+                practices, Cybrosys Technologies will design and implement a system that enhances operational
+                efficiency, improves scalability, and ensures long-term sustainability for your business.
+            </p>
+        </div>
+    </div>
+
+    <!-- Page 2 -->
+    <div class="page">
+        <div class="main-content">
+            <div class="content-section">
+                <h3>Company Overview</h3>
+                <p>
+                    Established in 2008, Cybrosys Technologies Pvt. Ltd. is a globally recognized ISO-certified
+                    IT solutions provider headquartered in Calicut, Kerala, India. With over 16 years of
+                    industry experience, Cybrosys has expanded its global footprint by serving clients in over
+                    150 countries. Their operations span across continents, delivering tailored IT solutions to
+                    industries such as manufacturing, retail, healthcare, education, and finance. Backed by a
+                    team of 300+ professionals, Cybrosys has successfully executed more than 3,000 client
+                    projects, making them a trusted name in enterprise software development.
+                </p>
+            </div>
+            <div class="content-section">
+                <h3>Odoo Expertise & Contributions</h3>
+                <p>
+                    As an Odoo Gold Partner, Cybrosys Technologies leads in ERP implementation, customization,
+                    and app development. The company has contributed over 670 Odoo modules to the community and
+                    authored more than 15 books on Odoo. Their expertise spans multiple Odoo verticals including
+                    Accounting, CRM, Inventory, Manufacturing, HRM, POS, E-commerce, and Project Management.
+                    Products like Open HRMS are testaments to their functional depth and innovation. With their
+                    commitment to quality, Cybrosys has positioned itself as a global Odoo leader, serving a
+                    wide range of enterprise needs with precision and scalability.
+                </p>
+            </div>
+            <div class="content-section">
+                <h3>Innovation & Client-Centric Approach</h3>
+                <p>
+                    At Cybrosys, innovation drives everything. Their dedicated R&D division is equipped with
+                    modern lab facilities that fuel continuous improvement in solution design and delivery. The
+                    company offers a wide range of services including software development, source code
+                    licensing, and employee outsourcing. By integrating cutting-edge technologies like AI and
+                    IoT into their solutions, Cybrosys ensures future-ready platforms for its clients. Their
+                    client-first philosophy is supported by 24/7 support and a proven track record of on-time,
+                    on-budget project delivery—empowering businesses to scale effectively in the digital era.
+                </p>
+            </div>
+            <div class="content-section">
+                <h3>Global Presence & Recognition</h3>
+                <p>
+                    Cybrosys Technologies operates internationally. This global network
+                    enables the company to provide localized services and 24/7 client support. Cybrosys is ISO
+                    9001:2015 and ISO 27001:2013 certified, reflecting their commitment to quality and data
+                    security. The company has earned multiple accolades, including the “Best Odoo Partner – Asia
+                    Pacific” award and recognition at global tech summits for innovation in ERP solutions.
+                </p>
+            </div>
+            <div class="content-section">
+                <h3>Understanding the Client's Needs</h3>
+                <p>
+                    Cybrosys Technologies strives to deliver solutions tailored to meet the unique needs of each
+                    client. After a thorough discussion and analysis, we have understood that the client
+                    requires an Odoo-based solution that is adaptable, scalable, and integrated seamlessly with
+                    their existing business processes.
+                </p>
+                <p>
+                    The client aims to improve operational efficiency, enhance reporting capabilities, and
+                    ensure a smooth integration between different departments, including Sales, Inventory,
+                    Manufacturing, and Accounting. A key requirement is the ability to manage workflows more
+                    effectively and enable greater collaboration across teams.
+                </p>
+            </div>
+            <div class="content-section">
+                <h3>Key Functional Areas</h3>
+                <p>
+                    Based on our discussions, we have identified the following key functional areas for the Odoo
+                    implementation:
+                </p>
+                <ul>
+                    <li>
+                        <strong>Sales Management:</strong>
+                        The client requires customizations in the sales workflow to ensure that quotes, orders,
+                        and invoices are efficiently processed. They need a system that can handle complex
+                        pricing rules, discounts, and commission tracking.
+                    </li>
+                    <li>
+                        <strong>Inventory and Warehouse Management:</strong>
+                        A crucial need is the ability to track inventory levels in real-time, automate stock
+                        reordering, and improve stock movement tracking. The client also needs advanced
+                        reporting on warehouse performance and stock valuation.
+                    </li>
+                    <li>
+                        <strong>Manufacturing:</strong>
+                        The client requires Odoo’s manufacturing module to be customized to better manage
+                        production scheduling, bill of materials, work orders, and product lifecycle management.
+                        The goal is to minimize lead times and enhance production efficiency.
+                    </li>
+                    <li>
+                        <strong>Accounting and Finance:</strong>
+                        Odoo’s accounting system needs to be configured to meet the client’s tax regulations,
+                        multi-currency support, and financial reporting requirements. This will ensure smooth
+                        integration with other departments and allow for detailed financial analysis.
+                    </li>
+                    <li>
+                        <strong>Human Resources:</strong>
+                        The client needs the HR module to be customized to handle recruitment, attendance,
+                        payroll, and performance evaluations. They are also looking for enhanced reporting and
+                        analytics on employee data.
+                    </li>
+                    <li>
+                        <strong>Reporting and Analytics:</strong>
+                        The client requires advanced reporting capabilities that allow easy access to
+                        performance metrics, sales data, inventory analysis, and financial reports. Custom
+                        dashboards and reports need to be integrated into the system for better decision-making.
+                    </li>
+                </ul>
+            </div>
+            <div class="content-section">
+                <h3>Custom Features and Integrations</h3>
+                <p>
+                    The client also requires the following custom features and integrations to ensure that their
+                    business processes are fully supported:
+                </p>
+                <ul>
+                    <li>
+                        <strong>Custom Workflows:</strong>
+                        Automation of business processes through custom workflows, ensuring that each department
+                        operates in sync and tasks are completed promptly.
+                    </li>
+                    <li>
+                        <strong>Third-Party Integrations:</strong>
+                        Integration with external applications such as CRM systems, payment gateways, and email
+                        marketing platforms to streamline communication and data flow across systems.
+                    </li>
+                    <li>
+                        <strong>Mobile Access:</strong>
+                        The client requires mobile access to key features, enabling employees to stay productive
+                        while on the go. Custom mobile interfaces will be developed to support field sales and
+                        warehouse staff.
+                    </li>
+                    <li>
+                        <strong>Custom Notifications:</strong>
+                        Setting up customized alerts and notifications for key events, such as low stock levels,
+                        upcoming deadlines, or approval requirements. This will help ensure that stakeholders
+                        stay informed and proactive.
+                    </li>
+                </ul>
+            </div>
+            <div class="content-section">
+                <h3>Implementation Approach</h3>
+                <p>
+                    We will follow a structured approach to the implementation of the Odoo system:
+                </p>
+                <ul>
+                    <li>
+                        <strong>Requirement Gathering:</strong>
+                        Our team will conduct detailed sessions with the client to understand their existing
+                        processes, identify pain points, and finalize system specifications.
+                    </li>
+                    <li>
+                        <strong>System Customization:</strong>
+                        Based on the gathered requirements, we will proceed with configuring and customizing the
+                        Odoo modules to align with the client’s needs. This will include developing custom
+                        features and workflows as per the agreed specifications.
+                    </li>
+                    <li>
+                        <strong>Testing and QA:</strong>
+                        We will perform extensive testing to ensure that the customizations are functioning as
+                        expected. This includes functional testing, user acceptance testing, and performance
+                        testing to ensure the system meets the client’s quality standards.
+                    </li>
+                    <li>
+                        <strong>Training and Support:</strong>
+                        Post-implementation, we will provide training to the client’s staff to ensure smooth
+                        adoption of the system. Ongoing support will be available to address any issues or
+                        queries that arise.
+                    </li>
+                    <li>
+                        <strong>Go-Live and Post-Implementation Review:</strong>
+                        After the system goes live, we will monitor its performance, make any necessary
+                        adjustments, and conduct a post-implementation review to ensure the solution meets the
+                        client's expectations.
+                    </li>
+                </ul>
+            </div>
+            <div class="content-section">
+                <h3>Conclusion</h3>
+                <p>
+                    Cybrosys Technologies is committed to delivering a customized Odoo solution that will
+                    streamline the client’s business processes, improve operational efficiency, and provide
+                    actionable insights for better decision-making. With our expertise in Odoo customization and
+                    a thorough understanding of the client’s needs, we are confident that this solution will
+                    meet their expectations and help drive growth.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Client Details -->
+    <div class="page">
+        <div class="main-content">
+            <div class="content-section">
+                <h3>Technical Configuration</h3>
+                <div style="border: 1px solid #ccc; border-radius: 10px; padding: 16px 22px; font-size: 17px; line-height: 1.9; background-color: #f9f9f9;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 14px;">
+                        <strong style="width: 40%; font-size: 18px;">Odoo Version:</strong>
+                        <span style="width: 58%; font-weight: 700; font-size: 18px; color: #1a3c5e;">Odoo 18</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <strong style="width: 40%; font-size: 18px;">Hosting Platform:</strong>
+                        <span style="width: 58%; font-weight: 700; font-size: 18px; color: #1a3c5e;">Odoo.sh</span>
+                    </div>
+                </div>
+            </div>
+            <div class="content-section">
+                <h3>Client-Supplied Details</h3>
+                <p>
+                    The client has confirmed that their ERP infrastructure is built on the latest <strong>Odoo 18</strong> platform, taking advantage of improved performance, updated backend capabilities, and new functional enhancements. The system is hosted on <strong>Odoo.sh</strong>, which offers a fully managed and scalable cloud environment optimized for development and continuous delivery.
+                </p>
+                <p>
+                    The current setup includes both staging and production environments, integrated with GitHub for version control and deployment tracking. This infrastructure supports agile implementation workflows, allowing rapid testing and seamless delivery of new features or custom modules.
+                </p>
+            </div>
+            <div class="content-section">
+                <h3>Access & Repository Details</h3>
+                <p>
+                    The client has provided full access to their GitHub repository linked to the Odoo.sh instance. This includes permissions for pushing new branches, committing feature-specific code, and configuring automated staging builds. Access to staging and production databases has also been shared for testing, debugging, and module validation.
+                </p>
+                <p>
+                    Development activities will be managed through feature branches, with each change undergoing validation in the staging environment before moving to production. This ensures stability, minimizes downtime, and maintains traceability throughout the implementation process.
+                </p>
+            </div>
+            <div class="content-section">
+                <h3>Environment Readiness & Strategy</h3>
+                <p>
+                    Based on the hosting architecture and client requirements, the solution will be developed using modular, upgrade-safe coding practices. Automated backup features, integrated logs, and rollback capabilities of Odoo.sh will be leveraged throughout the implementation cycle. Additionally, our development team will maintain bi-weekly syncs with the client’s team for iterative feedback, deployment planning, and functional sign-offs.
+               -dates-timeslot--><p>
+
+                </p>
+            </div>
+            <div class="content-section">
+                <h3>Module Overview</h3>
+                <p>
+                    Based on our understanding of the client’s operational structure and strategic objectives, the following core modules have been identified for implementation:
+                </p>
+                <ul>
+                    <li>Sales</li>
+                    <li>CRM (Customer Relationship Management)</li>
+                    <li>Purchase</li>
+                    <li>Inventory</li>
+                    <li>Accounting & Finance</li>
+                    <li>HRM (Human Resource Management)</li>
+                    <li>Project Management</li>
+                </ul>
+            </div>
+            <div class="content-section">
+                <h3>Sales Management</h3>
+                <p>The Sales module will be configured to manage the complete sales lifecycle — from quotation to order confirmation and delivery. Key features include:</p>
+                <ul>
+                    <li>Quotation and Sales Order management</li>
+                    <li>Dynamic product pricing and discount rules</li>
+                    <li>Integration with inventory for real-time stock updates</li>
+                    <li>Automated invoice generation from confirmed orders</li>
+                    <li>Reporting dashboards for sales performance and pipeline forecasting</li>
+                </ul>
+                <p>Salespersons will have access to lead timelines, follow-up schedules, and instant visibility into customer history, improving response time and client engagement.</p>
+            </div>
+            <div class="content-section">
+                <h3>CRM (Customer Relationship Management)</h3>
+                <p>The CRM module will be implemented to enhance lead tracking, customer communication, and opportunity conversion. Functionality includes:</p>
+                <ul>
+                    <li>Lead generation through website forms and email campaigns</li>
+                    <li>Custom pipeline stages for opportunity tracking</li>
+                    <li>Activity scheduling and auto-reminder notifications</li>
+                    <li>Internal team communication and customer interaction logs</li>
+                    <li>Real-time conversion rate analytics and lost reason tagging</li>
+                </ul>
+            </div>
+            <div class="content-section">
+                <h3>Purchase Management</h3>
+                <p>The Purchase module will streamline procurement operations, reduce manual intervention, and support vendor collaboration. Key features include:</p>
+                <ul>
+                    <li>Purchase Request and RFQ generation</li>
+                    <li>Vendor pricelist management</li>
+                    <li>Automated PO creation based on stock rules</li>
+                    <li>Three-way matching (PO, Invoice, Receipt)</li>
+                    <li>Approval workflows for high-value purchases</li>
+                </ul>
+                <p>Supplier performance metrics and lead time tracking will be incorporated to support better procurement decisions.</p>
+            </div>
+            <div class="content-section">
+                <h3>Inventory Management</h3>
+                <p>The Inventory module will be configured to ensure accurate stock visibility, efficient transfers, and fulfillment automation. Key features include:</p>
+                <ul>
+                    <li>Warehouse and location hierarchy setup</li>
+                    <li>Product categories, units of measure, and tracking methods</li>
+                    <li>Incoming and outgoing shipment management</li>
+                    <li>Internal transfers and delivery scheduling</li>
+                    <li>Stock valuation and real-time availability updates</li>
+                    <li>Batch, lot, and serial number tracking (if applicable)</li>
+                </ul>
+            </div>
+            <div class="content-section">
+                <h3>Accounting & Finance</h3>
+                <p>A localized accounting system will be implemented in accordance with the client’s chart of accounts, tax policies, and compliance requirements. Core functionalities include:</p>
+                <ul>
+                    <li>Automated journal entries from sales, purchases, and payments</li>
+                    <li>Tax configuration (GST/VAT/Other as applicable)</li>
+                    <li>Bank synchronization and reconciliation</li>
+                    <li>Customer/vendor invoicing and payment tracking</li>
+                    <li>Multi-currency management and fiscal year setup</li>
+                    <li>Financial reports: Balance Sheet, P&L, Cash Flow, and Audit Logs</li>
+                </ul>
+            </div>
+            <div class="content-section">
+                <h3>HRM (Human Resource Management)</h3>
+                <p>The HR module will centralize employee records, streamline payroll, and enable attendance & leave tracking. Planned features include:</p>
+                <ul>
+                    <li>Employee profile and contract management</li>
+                    <li>Leave request, approval flows, and accrual policies</li>
+                    <li>Attendance integration (manual or biometric if applicable)</li>
+                    <li>Department and job structure setup</li>
+                    <li>Payroll configuration (basic salary + allowances + deductions)</li>
+                </ul>
+                <p>The HRM system will help automate HR processes and maintain transparency in workforce operations.</p>
+            </div>
+            <div class="content-section">
+                <h3>Project Management</h3>
+                <p>The Project module will support structured task planning, team coordination, and deadline tracking. It will include:</p>
+                <ul>
+                    <li>Project and sub-task hierarchy</li>
+                    <li>Kanban and Gantt views for activity tracking</li>
+                    <li>Time logging and progress status</li>
+                    <li>Project budgeting and timesheet integration</li>
+                    <li>Internal collaboration and document attachments</li>
+                </ul>
+                <p>This module will assist in organizing deliverables, aligning teams, and ensuring on-time execution of key initiatives.</p>
+            </div>
+            <div class="content-section">
+                <h3>Additional Custom Requirements</h3>
+                <p>The following requirements have been identified as custom needs beyond standard Odoo functionality. These will be developed specifically for the client:</p>
+                <ul>
+                    <li>Customized reports tailored to management KPIs</li>
+                    <li>Third-party system integration via REST API</li>
+                    <li>Role-based dashboards with department-specific views</li>
+                    <li>Custom workflow for internal approvals</li>
+                    <li>Mobile-responsive interface optimization for field users</li>
+                </ul>
+            </div>
+            <div class="content-section">
+                <h3>Non-Functional Requirements</h3>
+                <p>In addition to functional scope, the following non-functional requirements are important to ensure solution reliability and sustainability:</p>
+                <ul>
+                    <li><strong>Performance:</strong> System should support 50+ concurrent users with minimal latency</li>
+                    <li><strong>Security:</strong> Role-based access, encrypted backups, and audit logs enabled</li>
+                    <li><strong>Scalability:</strong> Infrastructure should allow scale-up to support multi-branch operations</li>
+                    <li><strong>Maintainability:</strong> Codebase follows Odoo best practices and is version controlled</li>
+                    <li><strong>Uptime:</strong> System should maintain  Auge availability under normal conditions</li>
+                </ul>
+            </div>
+            <div class="content-section">
+                <h3>Summary & Next Steps</h3>
+                <p>This FRD summarizes the business and technical requirements gathered through collaborative sessions with the client. Upon final approval of this document:</p>
+                <ul>
+                    <li>The technical team will begin module development and environment configuration</li>
+                    <li>Bi-weekly sprint reviews will be scheduled for iterative feedback</li>
+                    <li>Staging environment will be used for UAT (User Acceptance Testing)</li>
+                    <li>Production deployment will follow final sign-off</li>
+                </ul>
+                <p>All updates to this document will be tracked and versioned. The implementation will follow agile delivery with a focus on transparency, performance, and quality.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page final -->
+    <div class="page">
+        <div class="main-content">
+            <div class="content-section">
+                <h3>Conclusion</h3>
+                <p>
+                    This Functional Requirement Document outlines the comprehensive scope, functional requirements, and technical specifications for the proposed Odoo-based ERP solution tailored for <strong>[Client Name]</strong>. Cybrosys Technologies is committed to delivering a scalable, efficient, and innovative system that aligns with your strategic objectives and drives operational excellence.
+                </p>
+                <p>
+                    By leveraging our expertise as an Odoo Gold Partner and our client-centric approach, we aim to ensure a seamless implementation, robust performance, and long-term value for your business. We look forward to your feedback and approval to proceed with the next phases of the project.
+                </p>
+            </div>
+            <div class="content-section">
+                <h3>Next Steps</h3>
+                <p>
+                    Upon approval of this document, the following steps will be initiated:
+                </p>
+                <ul>
+                    <li>Finalization of project timelines and resource allocation.</li>
+                    <li>Initiation of module development and environment configuration in the Odoo.sh staging environment.</li>
+                    <li>Bi-weekly sprint reviews with <strong>[Client Name]</strong> for iterative feedback and alignment.</li>
+                    <li>User Acceptance Testing (UAT) in the staging environment to validate functionality.</li>
+                    <li>Production deployment and post-implementation support following final sign-off.</li>
+                </ul>
+                <p>
+                    All updates to this document will be versioned and communicated to ensure transparency throughout the project lifecycle.
+                </p>
+            </div>
+            <div class="content-section">
+                <h3>Approval</h3>
+                <p>
+                    We, the undersigned, agree that this Functional Requirement Document accurately reflects the discussed requirements and scope for the project.
+                </p>
+                <br/>
+                <p>
+                    <strong>For [Client Name]:</strong>
+                </p>
+                <p>Name: ___________________________</p>
+                <p>Title: ____________________________</p>
+                <p>Date: ____________________________</p>
+                <br/>
+                <p>
+                    <strong>For Cybrosys Technologies:</strong>
+                </p>
+                <p>Name: ___________________________</p>
+                <p>Title: ____________________________</p>
+                <p>Date: ____________________________</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Cybrosys Technologies | www.cybrosys.com | info@cybrosys.com</p>
+    </div>
+</body>
+</html>
